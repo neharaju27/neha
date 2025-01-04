@@ -1,0 +1,300 @@
+{
+ "cells": [
+  {
+   "cell_type": "code",
+   "execution_count": 13,
+   "id": "9c3bed5d-bd81-443c-8bd1-e6486b67db61",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdin",
+     "output_type": "stream",
+     "text": [
+      " \"Hello World!\"\n"
+     ]
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "3\n"
+     ]
+    }
+   ],
+   "source": [
+    "s=input()\n",
+    "count=0\n",
+    "for char in s:\n",
+    "    if char.lower() in \"aeiou\":\n",
+    "        count+=1\n",
+    "print(count)\n",
+    "    \n",
+    "    "
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 15,
+   "id": "aefdafd1-de78-4a7b-ae2d-c6c370bde121",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Original Tuple: (1, 1, 2, 2, 3, 4, 4, 5, 5, 6)\n",
+      "Unique Tuple: (1, 2, 3, 4, 5, 6)\n"
+     ]
+    }
+   ],
+   "source": [
+    "original_tuple=(1,1,2,2,3,4,4,5,5,6)\n",
+    "unique_tuple=tuple(set(original_tuple))\n",
+    "print(\"Original Tuple:\",original_tuple)\n",
+    "print(\"Unique Tuple:\",unique_tuple)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 19,
+   "id": "3aa1ad5c-fa43-4438-a202-d47c3e9b0521",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdin",
+     "output_type": "stream",
+     "text": [
+      " \"radar\"\n"
+     ]
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "True\n"
+     ]
+    }
+   ],
+   "source": [
+    "s=input()\n",
+    "s=s.replace(\" \",\"\").lower()\n",
+    "is_palindrome=s==s[::-1]\n",
+    "if is_palindrome:\n",
+    "    print(\"True\")\n",
+    "else:\n",
+    "    print(\"False\")\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 29,
+   "id": "021d0442-b577-4015-99a2-501d0d46c70f",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "[4, 8, 12, 16, 20]\n"
+     ]
+    }
+   ],
+   "source": [
+    "l=[1,2,3,4,5,6,7,8,9,10]\n",
+    "l=[num*2 for num in l if num%2==0]\n",
+    "print(l)\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 31,
+   "id": "50078945-e504-45fb-a00b-5b2e7d1e2997",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdin",
+     "output_type": "stream",
+     "text": [
+      " \"Hello World!\"\n"
+     ]
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "{'\"': 2, 'H': 1, 'e': 1, 'l': 3, 'o': 2, ' ': 1, 'W': 1, 'r': 1, 'd': 1, '!': 1}\n"
+     ]
+    }
+   ],
+   "source": [
+    "s=input()\n",
+    "frequency={}\n",
+    "for char in s:\n",
+    "    frequency[char]=frequency.get(char,0)+1\n",
+    "print(frequency)\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 33,
+   "id": "ce4396f8-0201-4f8a-8ede-5df03c5bd493",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdin",
+     "output_type": "stream",
+     "text": [
+      " 2 10 20 40 30 60 70\n"
+     ]
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "70\n"
+     ]
+    }
+   ],
+   "source": [
+    "L=list(map(int,input().split()))\n",
+    "largest=L[0]\n",
+    "for num in L:\n",
+    "    if num>largest:\n",
+    "        largest=num\n",
+    "print(largest)\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 47,
+   "id": "b9d41109-93cc-4cd8-8d03-0320bd9aad9f",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdin",
+     "output_type": "stream",
+     "text": [
+      " 6\n"
+     ]
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "6 is a prefect number\n"
+     ]
+    }
+   ],
+   "source": [
+    "n=int(input())\n",
+    "sum_divisor=0\n",
+    "for i in range(1,n):\n",
+    "    if n%i==0:\n",
+    "        sum_divisor+=i\n",
+    "if sum_divisor==n:\n",
+    "    print(f\"{n} is a prefect number\")\n",
+    "else:\n",
+    "    print(f\"{n} is not a prefect number\")"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 53,
+   "id": "0a9f1e37-c81c-4cfb-8048-52460f5e3442",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdin",
+     "output_type": "stream",
+     "text": [
+      "l: 1 2 3 4 5 6\n",
+      "n: 2\n"
+     ]
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "[5, 6, 1, 2, 3, 4]\n"
+     ]
+    }
+   ],
+   "source": [
+    "l=list(map(int,input(\"l:\").split()))\n",
+    "n=int(input(\"n:\"))\n",
+    "n=n%len(l)\n",
+    "rotated_list=l[-n:]+l[:-n]\n",
+    "print(rotated_list)\n",
+    "\n",
+    "      "
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 57,
+   "id": "18a435c3-a770-4cef-8631-3f1da9734d82",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdin",
+     "output_type": "stream",
+     "text": [
+      "N: 6\n",
+      "arr: 0 2 0 6 9 6\n"
+     ]
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "0\n"
+     ]
+    }
+   ],
+   "source": [
+    "N=int(input(\"N:\"))\n",
+    "arr=list(map(int,input(\"arr:\").split()))\n",
+    "frequency={}\n",
+    "for num in arr:\n",
+    "    frequency[num]=frequency.get(num,0)+1\n",
+    "max_freq=-1\n",
+    "result=None\n",
+    "for num in arr:\n",
+    "    if frequency[num]>max_freq:\n",
+    "        max_freq=frequency[num]\n",
+    "        result=num\n",
+    "print(result)\n",
+    "\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "0996e53b-661c-4e07-9c84-764c6236b5c2",
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Python 3 (ipykernel)",
+   "language": "python",
+   "name": "python3"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.12.7"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 5
+}
